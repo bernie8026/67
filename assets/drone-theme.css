@@ -1,0 +1,43 @@
+:root {
+    --ink: #061014;
+    --ink-soft: #09171c;
+    --panel: #0d1d23;
+    --paper: #eef8f6;
+    --paper-soft: #cfdfdc;
+    --muted: #789097;
+    --signal: #58f5c7;
+    --signal-dark: #21b993;
+    --danger: #ff826f;
+}
+body { background-color: var(--ink); }
+.home-hero { background:
+    radial-gradient(circle at 77% 46%, rgba(88,245,199,.13), transparent 25%),
+    radial-gradient(circle at 40% 18%, rgba(61,147,255,.08), transparent 30%),
+    #061014; }
+.hero-title-accent { color: var(--signal) !important; }
+.profile-section { background: radial-gradient(circle at 80% 65%, rgba(88,245,199,.13), transparent 27%), #071216; }
+body:not(.home-page) > header { background: linear-gradient(115deg, rgba(6,16,20,.98), rgba(11,31,37,.92)) !important; }
+body:not(.home-page) > header::after { content: "AERO // EDU"; }
+.platform-guide > header { background: linear-gradient(90deg, rgba(6,16,20,.98), rgba(9,28,33,.94)) !important; }
+.drone-figure { display:flex; align-items:center; justify-content:center; }
+.drone-visual { position:relative; width:min(34vw,460px); aspect-ratio:1.25; filter:drop-shadow(0 28px 38px rgba(0,0,0,.55)); transform:rotate(-8deg); }
+.drone-core { position:absolute; left:50%; top:50%; width:34%; aspect-ratio:1.65; transform:translate(-50%,-50%); display:grid; place-items:center; border:1px solid rgba(238,248,246,.38); background:linear-gradient(145deg,#173941,#0a181d); color:var(--signal); font-family:var(--display); font-size:clamp(1.2rem,3vw,2.6rem); font-weight:950; letter-spacing:.08em; clip-path:polygon(12% 0,88% 0,100% 38%,82% 100%,18% 100%,0 38%); z-index:4; }
+.drone-arm { position:absolute; left:50%; top:50%; width:76%; height:8px; background:linear-gradient(90deg,rgba(88,245,199,.18),rgba(238,248,246,.72),rgba(88,245,199,.18)); transform-origin:center; z-index:2; }
+.arm-a { transform:translate(-50%,-50%) rotate(29deg); }.arm-b { transform:translate(-50%,-50%) rotate(-29deg); }
+.drone-rotor { position:absolute; width:29%; aspect-ratio:1; border:2px solid rgba(88,245,199,.72); border-radius:50%; box-shadow:0 0 0 8px rgba(88,245,199,.05), inset 0 0 28px rgba(88,245,199,.08); z-index:1; }
+.drone-rotor::before,.drone-rotor::after{content:"";position:absolute;left:50%;top:50%;width:82%;height:2px;background:rgba(238,248,246,.58);transform:translate(-50%,-50%) rotate(18deg)}
+.drone-rotor::after{transform:translate(-50%,-50%) rotate(108deg)}
+.rotor-a{left:1%;top:3%}.rotor-b{right:1%;top:3%}.rotor-c{left:1%;bottom:3%}.rotor-d{right:1%;bottom:3%}
+.drone-camera { position:absolute; left:50%; top:69%; width:12%; aspect-ratio:1; transform:translateX(-50%); border:1px solid rgba(238,248,246,.35); border-radius:50%; background:radial-gradient(circle at 42% 38%,#6adfff 0 8%,#143e49 10% 28%,#020708 30% 100%); z-index:5; }
+.drone-blueprint { display:grid; place-items:center; min-height:420px; background:linear-gradient(rgba(88,245,199,.04) 1px, transparent 1px),linear-gradient(90deg,rgba(88,245,199,.04) 1px,transparent 1px),#07171c !important; background-size:28px 28px !important; }
+.blueprint-drone { position:relative; width:62%; aspect-ratio:1.4; border:1px solid rgba(88,245,199,.32); border-radius:50%; }
+.blueprint-drone span,.blueprint-drone i{position:absolute;left:50%;top:50%;width:100%;height:2px;background:rgba(88,245,199,.72);transform:translate(-50%,-50%) rotate(32deg)}
+.blueprint-drone i{transform:translate(-50%,-50%) rotate(-32deg)}
+.blueprint-drone b{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:34%;aspect-ratio:1.8;background:#0d252c;border:1px solid var(--signal);color:var(--signal);font-family:var(--display);font-size:clamp(1.2rem,4vw,3rem)}
+.feature-transmission__visual.drone-blueprint::after { background:linear-gradient(180deg,transparent,rgba(6,16,20,.7)); }
+.archive-card__icon { color: var(--signal); }
+@media(max-width:760px){.drone-visual{width:min(72vw,400px)}.drone-blueprint{min-height:300px}}
+
+.page-hero { background: radial-gradient(circle at 78% 42%, rgba(88,245,199,.14), transparent 28%), linear-gradient(115deg,#061014 0%,#0b2026 58%,#061014 100%) !important; }
+.page-hero::after { width:min(44vw,660px); background: radial-gradient(circle at 55% 48%, rgba(88,245,199,.14), transparent 26%), linear-gradient(135deg, transparent 0 42%, rgba(88,245,199,.12) 42% 43%, transparent 43% 100%) !important; opacity:.8 !important; filter:none !important; }
+.page-hero--platform::after { background: radial-gradient(circle at 55% 48%, rgba(88,245,199,.16), transparent 28%), linear-gradient(135deg, transparent 0 45%, rgba(88,245,199,.16) 45% 46%, transparent 46% 100%) !important; }
